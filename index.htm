@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Exhaust Controller</title>
+<link href="jquery.keypad.css" rel="stylesheet">
+<style>
+#inlineKeypad { width: 10em; }
+.Big{ width:100px;
+      height:40px;
+	  background-color:cyan;
+	}  
+</style>
+
+<script src="jquery_Win7.js"></script>
+<script src="jquery.plugin.js"></script>
+<script src="jquery.keypad.js"></script>
+<script src="jquery_timer.js" type="text/javascript" ></script>
+<script src="index.js" type="text/javascript" ></script>
+<script src="underscore.js" type="text/javascript" ></script>    
+<script>
+$(function () {
+	$('#Timer').keypad();
+	$('#CycleTimes').keypad();
+});
+</script>
+	
+
+</head>
+<body>
+<object name="pcm" width="0" height="0"
+classid="clsid:48A185F1-FFDB-11D3-80E3-00C04F176153"></object>
+
+<h2 align="center">Winten Exhaust Controller -1/4"(Local/Remote)</h2>
+<hr>
+<input type="button" value="Remote" id="Remote"  class="Big">
+<input type="button" value="Piston/Middle" id="Piston"  class="Big">
+
+<div id="log"><h2 id="errorMessage"></h2></div></p>
+
+<form>
+
+
+<p align="center">
+
+<input type="button" value="Open" id="Open"  class="Big">
+<input type="button" value="Close" id="Close"  class="Big">
+<input type="button" value="Cycle" id="Auto"  class="Big">
+<input type="button" value="Stop" id="cycleStop"  class="Big">
+
+<br>
+<br>
+<hr />
+Timer(Sec.)<input type="text" size="5" name="Timer" id="Timer"> Cycle Times<input type="text" size="5" name="CycleTimes" id="CycleTimes">
+Cycles Left=><span id="Have_Cycle"></span>
+<br><input type="button" value="Set" id="b_Timer" class="Big" >
+<input type="button" value="Run" id="Cycle"  class="Big">
+<input type="button" value="Stop" id="Stop"  class="Big">
+
+</p>
+<hr>
+<br>
+
+<a href="http://127.0.0.1/Chart/show_Chart_Ch1.php" target="_blank">Show Travel Time</a><br>
+<a href="http://127.0.0.1/Chart/reset_show_Chart_Ch1.php" target="_blank">Reset/Show Travel Time</a>
+
+</form>
+
+
+
+
+
+
+
+</body>
+</html>
